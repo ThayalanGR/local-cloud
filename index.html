@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Local-Cloud</title>
+    <link rel="stylesheet" href="./assets/css/all.css">
     <link rel="shortcut icon" href="assets/image/cloud.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        #redirect {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+            background: url("./assets/gif/preload.gif") center no-repeat #524490;
+            background-size: 300px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>hello World - local-cloud</h1>
+    <div class="section" id="redirect">
+        <!-- <img src="./assets/gif/preload.gif" alt="" srcset="" style="max-width: 300px; overflow: hidden; "> -->
+        <h5 class="text-light">Local-Cloud Loading <i class="fas fa-spinner fa-pulse"></i></h5>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                window.location.href = `modules/upload`
+            }, 2000)
+        })
+    </script>
 </body>
+
 </html>
