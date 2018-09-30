@@ -74,7 +74,7 @@ header img {
 
 .progress-bar {
     /* content: ''; */
-    width: 100%;
+    /* width: 100%; */
     background: green;
     position: absolute;
     left:0;
