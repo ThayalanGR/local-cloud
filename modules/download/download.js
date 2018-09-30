@@ -19,14 +19,14 @@ function buildDomBody(response) {
     response.forEach(element => {
         console.log(element[0].filename)
         output = `<div class="row">
-                    <div class="col-1 text-danger font-weight-bold">${count} . </div>
-                    <div class="col-7 text-success" id="download-content-${element[0].id}" style="overflow-wrap:break-word;"><b>${element[0].filename}</b> <br> <small class="text-dark"><b>Size</b> : ${Math.round(element[0].filesize/Math.pow(2, 20))}MB &nbsp;<b>Date</b> : ${element[0].date.split(" ")[0]}&nbsp; <b>Time </b>: ${element[0].date.split(" ")[1]}</small></div>
-                    <div class="col-7 text-center" id="download-content-notification-${element[0].id}" style="overflow-wrap:break-word; position:relative; display:none;">
-                        <div id="download-content-progress-${element[0].id}" style="position: absolute; height: 100%; width: 0%; background: green; z-index: 1; opacity: .40; "></div>
+                    <div class="col text-danger font-weight-bold">${count} . </div>
+                    <div class="col-md-7 col-sm-10 text-success" id="download-content-${element[0].id}" style="overflow-wrap:break-word;"><b>${element[0].filename}</b> <br> <small class="text-dark"><b>Size</b> : ${Math.round(element[0].filesize/Math.pow(2, 20))}MB &nbsp;<b>Date</b> : ${element[0].date.split(" ")[0]}&nbsp; <b>Time </b>: ${element[0].date.split(" ")[1]}</small></div>
+                    <div class="col-md-7 col-sm-10 text-center" id="download-content-notification-${element[0].id}" style="overflow-wrap:break-word; position:relative; display:none;">
+                        <div id="download-content-progress-${element[0].id}" style="position: absolute; height: 100%; width: 0%; background: green; z-index: -1; opacity: .40; "></div>
                         <div id="download-content-percentage-${element[0].id}" class="text-danger" style="font-size: 13px;"></div>
                     </div>
-                    <div class="col-2"><a class="btn" id="download-button-${element[0].id}" onclick="downloadFile('${element[0].filename}', '${element[0].id}')" ><i class="fas fa-download  shadow text-primary fa-1x"></i></a></div>
-                    <div class="col-2"><a class="btn" id="delete-button-${element[0].id}" onclick="deleteFile('${element[0].filename}')" ><i class="fas fa-trash-alt  shadow text-danger fa-1x"></i></a></div>
+                    <div class="col"><a class="btn" id="download-button-${element[0].id}" onclick="downloadFile('${element[0].filename}', '${element[0].id}')" ><i class="fas fa-download  shadow text-primary fa-1x"></i></a></div>
+                    <div class="col"><a class="btn" id="delete-button-${element[0].id}" onclick="deleteFile('${element[0].filename}')" ><i class="fas fa-trash-alt  shadow text-danger fa-1x"></i></a></div>
                 </div>
                 <hr>`
         downloadContainer.innerHTML += output

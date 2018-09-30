@@ -9,8 +9,8 @@
     <link rel="shortcut icon" href="../../assets/image/cloud.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/all.css">
     <style>
-        
-            #se-pre-con {
+
+        #se-pre-con {
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
@@ -24,13 +24,13 @@
                 background-size: 300px;
             }
         </style>
-        <div id="preload">
-            <div id="se-pre-con">
-                <h5 class="text-light">Local-Cloud Loading <i class="fas fa-spinner fa-pulse"></i></h5>
-            </div>
+    <div id="preload">
+        <div id="se-pre-con">
+            <h5 class="text-light">Local-Cloud Loading <i class="fas fa-spinner fa-pulse"></i></h5>
         </div>
-        <script>
-            function fadeOut(elementToFade)
+    </div>
+    <script>
+        function fadeOut(elementToFade)
                 {
                     var element = document.getElementById(elementToFade);
                     var prelaod = document.getElementById("preload");
@@ -51,7 +51,7 @@
                     fadeOut("se-pre-con")
                 }
         </script>
-    
+
     <link rel="shortcut icon" href="assets/image/cloud.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -63,7 +63,7 @@
             <a href="../upload/"><i class="fas fa-cloud-upload-alt fa-2x"></i></a>
         </div>
 
-        <a href="../../"    style="text-decoration: none;" class="d-flex justify-content-center align-items-center">
+        <a href="../../" style="text-decoration: none;" class="d-flex justify-content-center align-items-center">
             <img src="../../assets/image/cloud.png" classs="rounded " alt="" srcset="">
             <h5 class="text-primary mt-2 ml-2"> Local-Cloud</h5>
         </a>
@@ -72,18 +72,47 @@
             <a href="../download/"> <i class="fas fa-cloud-download-alt fa-2x"></i></a>
         </div>
     </header>
-    <section class="container-fluid d-flex justify-content-center align-items-center section bg-light flex-column">
-        <div class="underlay d-flex justify-content-center align-items-center" id="notify-file">
-            <div id="progress-bar"></div>
-            <p class="text-danger text-center" style="overflow-wrap:break-word;" id="progress-notification">Upload any files .. </p>
-            <input type="file" name="" class="input-file" id="file-buffer">
+    <section class="container-fluid d-flex justify-content-center  align-items-center section bg-light flex-column">
+        <div class="underlay d-flex justify-content-center align-items-center shadow-lg" id="notify-file">
+            <!-- <div id="progress-bar"></div> -->
+            <p class="text-danger text-center" style="overflow-wrap:break-word;">Drag and
+                Drop files here .. </p>
+            <input type="file" name="" class="input-file" id="file-buffer" multiple>
         </div>
-        <!-- <div id="progress" class="p-4">
-            <progress id="progressBar" value="10"  max="100" style="width: 500px;" background-color="RED"></progress> 
-        </div> -->
+    </section>
+    <section class="container-fluid text-center">
+        <div class="row">
+            <div class="col">
+                <div class="container-fluid">
+                    <hr>
+                    <div class="row ">
+                        <div class="col text-primary font-weight-bold">Uploads in Progress</div>
+                    </div>
+                    <hr>
+                    <section id="upload-progress-container">
+                        <!-- 
+                        <div class="row">
+                            <div class="col-1 font-weight-bold text-primary  pt-1 pb-2">1.</div>
+                            <div class="col rounded ">
+                                <div id="progress-bar" class="progress-bar" class="rounded shadow"></div>
+                                <div class="d-flex justify-content-center text-danger  align-items-center" id="progress-notification">
+                                    sldjflsdjfljldfhasiodo</div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-center align-items-center">
+                                <button class="btn btn-sm shadow-sm btn-outline-light rounded-circle"> <i class="fas text-danger fa-times"></i></button>
+                            </div>
+                        </div>
+                        <hr> -->
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
     </section>
 
-  <script src="./upload.js"></script>
+    <script src="./upload.js"></script>
 </body>
 
 </html>
