@@ -4,7 +4,7 @@
 
 ///
 
-//if u want to add more than 20gb you need to pump up the underneath values in php.ini
+// if u want to add more than 20gb you need to pump up the underneath values in php.ini
 // memory_limit = 20000M
 // upload_max_filesize = 20000M
 // post_max_size = 20000M
