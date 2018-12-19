@@ -11,10 +11,12 @@ header ( 'Content-Type: application/octet-stream' );
 header ( 'content-Transfer-Encoding: ASCII' );
 // recommended to prevent caching of event data.
 header('Cache-Control: no-cache'); 
+// header('Content-Length: 10000M'); 
+
 // header("Content-Type: application/json; charset: UTF-8");
 // header("Content-Disposition: attachment");
 // header("Content-Transfer-Encoding: Binary");
-ini_set ( 'memory_limit', '256M' );
+ini_set ( 'memory_limit', '100000M' );
 require '../configuration/config.php';
 
 if(isset($_POST['fileName'])) {
